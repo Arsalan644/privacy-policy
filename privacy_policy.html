@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — GENWALLS</title>
+    <meta
+      name="description"
+      content="GENWALLS Privacy Policy - how we collect, use, and protect your data."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #000000;
+        --panel: #0b0b0d;
+        --muted: #9ca3af;
+        --text: #f3f4f6;
+        --accent-from: #9f56fe;
+        --accent-to: #d5b5ff;
+        --glass: rgba(255, 255, 255, 0.04);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        color: var(--text);
+        background: var(--bg);
+        font-family: "Poppins", Inter, system-ui, Segoe UI, Roboto, Arial,
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 32px;
+      }
+      /* header styled to match provided fixed white blurred header */
+      .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 5.2rem; /* matches h-[5.2rem] */
+        background: transparent; /* no background color as requested */
+        display: flex;
+        align-items: center;
+        z-index: 5000; /* z-50 equivalent */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      .header-inner {
+        width: 95%;
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      @media (min-width: 768px) {
+        .header-inner {
+          width: 80%;
+        }
+      }
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-left: -10px;
+        padding-top: 6px;
+      }
+      .header-left .logo-mark {
+        width: 56px;
+        height: 56px;
+        border-radius: 8px;
+      }
+      .header-right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .header-right .btn-contact {
+        display: none;
+      }
+      @media (min-width: 768px) {
+        .header-right .btn-contact {
+          display: inline-block;
+        }
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-left: 10px;
+      }
+      .logo-mark {
+        width: 56px;
+        height: 56px;
+        border-radius: 8px;
+        background: linear-gradient(
+          135deg,
+          var(--accent-from),
+          var(--accent-to)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 800;
+        font-size: 20px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+      }
+      .brand {
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 0.6px;
+        color: var(--text);
+      }
+      .btn-contact {
+        background: linear-gradient(
+          90deg,
+          var(--accent-from),
+          var(--accent-to)
+        );
+        color: #fff;
+        padding: 12px 20px;
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 15px;
+        box-shadow: 0 10px 30px rgba(11, 18, 32, 0.08);
+        transition: transform 0.14s ease, box-shadow 0.14s ease,
+          opacity 0.12s ease;
+      }
+      .btn-contact:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 32px rgba(11, 18, 32, 0.12);
+        opacity: 0.95;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 18px;
+        align-items: center;
+        border-radius: 14px;
+      }
+      .hero h1 {
+        margin: 0 0 1.5rem 0; /* mb-6 */
+        font-size: 1.875rem; /* text-3xl */
+        font-weight: 700; /* font-bold */
+        color: var(--text);
+        letter-spacing: 0.2px;
+      }
+      @media (min-width: 768px) {
+        .hero h1 {
+          font-size: 2.25rem; /* md:text-4xl */
+        }
+      }
+      .hero .meta {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .panel {
+        background: var(--panel);
+        border-radius: 14px;
+        padding: 26px;
+        margin-top: 22px;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.6);
+      }
+      h2 {
+        margin-top: 0;
+        font-size: 18px;
+      }
+      p {
+        color: var(--text);
+        line-height: 1.7;
+      }
+      ul {
+        color: var(--text);
+        padding-left: 18px;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      .section {
+        padding: 12px 0;
+        border-top: 1px solid rgba(15, 23, 42, 0.04);
+      }
+      .section:first-of-type {
+        border-top: none;
+      }
+      .cta {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .small {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      footer {
+        margin-top: 28px;
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+      }
+      a {
+        color: var(--accent-from);
+        text-decoration: none;
+      }
+      @media (max-width: 800px) {
+        .hero {
+          grid-template-columns: 1fr;
+          align-items: start;
+        }
+        .container {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <style>
+      body {
+        padding-top: calc(5.2rem + 8px);
+      }
+    </style>
+    <div class="container">
+      <header class="site-header">
+        <div class="header-inner">
+          <div class="header-left">
+            <div class="logo">
+              <div class="logo-mark">G</div>
+              <div class="brand">GENWALLS</div>
+            </div>
+          </div>
+          <div class="header-right">
+            <div class="small">Need help?</div>
+            <div>
+              <button
+                class="btn-contact"
+                onclick="location.href='mailto:info@nexvoltsolutions.com'"
+              >
+                Contact Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="hero" aria-labelledby="policy-title">
+        <div>
+          <h1 id="policy-title">Privacy Policy — GENWALLS</h1>
+          <div class="meta">Last updated: December 16, 2025</div>
+        </div>
+      </section>
+
+      <article class="panel" role="article" aria-label="Privacy policy content">
+        <section class="section">
+          <h2>Overview</h2>
+          <p class="muted">
+            GENWALLS values your privacy and is committed to protecting your
+            personal information. This Privacy Policy explains what information
+            we collect, how we use it, and the choices you have when using the
+            app.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Information We Collect</h2>
+          <ul>
+            <li>
+              <strong>Account information:</strong> email address, username, and
+              account details to sign up, log in, and personalize your
+              experience.
+            </li>
+            <li>
+              <strong>Device & usage data:</strong> device type, operating
+              system, language preferences, and app usage metrics for
+              performance, stability and analytics.
+            </li>
+            <li>
+              <strong>Prompts & generated content:</strong> prompts you submit
+              and generated wallpapers may be temporarily stored for processing
+              and to improve the service. These are not shared with third
+              parties for advertising or resale.
+            </li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Use of Information</h2>
+          <p>
+            We use information to provide, operate and improve GENWALLS, to
+            personalize your experience, respond to support requests, and to
+            analyze performance. We do not sell, trade, or rent your personal
+            data.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Sharing & Third Parties</h2>
+          <p>
+            We may share data with trusted service providers (hosting,
+            analytics, processors) who are contractually bound to protect your
+            information. We will disclose information when required by law or to
+            protect legal rights.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Retention & Deletion</h2>
+          <p>
+            We retain personal data only as long as necessary to provide the
+            service or to comply with legal obligations, after which we securely
+            delete it. You may request deletion of your account and related data
+            by emailing
+            <a href="info@nexvoltsolutions.com">support@genwalls.app</a>. We
+            will verify and process deletion requests within a reasonable
+            timeframe.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Security</h2>
+          <p>
+            We implement reasonable technical and organizational measures to
+            protect your data from unauthorized access, disclosure, alteration,
+            or destruction. However, no system is completely secure and we
+            cannot guarantee absolute security.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Children</h2>
+          <p>
+            GENWALLS is intended for general audiences and does not knowingly
+            collect personal data from children under 13. If we learn that we
+            have collected such data, we will delete it immediately.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Consent & Updates</h2>
+          <p>
+            By using GENWALLS you consent to the collection and use of
+            information described in this policy. We may update this Privacy
+            Policy from time to time; the latest version will be available in
+            the app. Continued use after changes indicates acceptance of the
+            updated policy.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Contact</h2>
+          <p>
+            Questions or requests regarding this Privacy Policy can be submitted
+            to <a href="info@nexvoltsolutions.com">support@genwalls.app</a>.
+          </p>
+        </section>
+      </article>
+
+      <footer>
+        <div class="muted">
+          © <span id="year"></span> GENWALLS. All rights reserved.
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Small dynamic touch
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
